@@ -36,7 +36,7 @@ DEP_EXIT_CODE=0
 SUM_EXIT_CODE=0
 LIST_EXIT_CODE=0
 
-/tmp/tools/nancy Gopkg.lock || DEP_EXIT_CODE=$?
+#/tmp/tools/nancy Gopkg.lock || DEP_EXIT_CODE=$?
 /tmp/tools/nancy go.sum || SUM_EXIT_CODE=$?
 GO111MODULE=on go list -m all | /tmp/tools/nancy || LIST_EXIT_CODE=$?
 
