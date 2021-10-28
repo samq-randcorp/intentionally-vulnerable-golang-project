@@ -19,5 +19,6 @@ jobs:
 
     - name: Build
       run: |
+        go mod tidy
         go list -deps all
       
