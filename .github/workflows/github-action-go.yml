@@ -18,7 +18,7 @@ jobs:
 
     - name: Build
       run: |
-        export GOPATH=/home/runner/work
+        export GOPATH=/home/runner/work/src
         echo "GOPATH IS" $GOPATH
         echo "GOROOT IS " $GOROOT
         echo "PATH IS" $PATH
