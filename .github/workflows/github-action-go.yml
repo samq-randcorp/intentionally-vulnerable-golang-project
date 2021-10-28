@@ -10,11 +10,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - name: GoPath setup
-      run: |
-        mkdir src && cd ./src
     - uses: actions/checkout@v2
-
     - name: Set up Go
       uses: actions/setup-go@v2
       with:
@@ -29,6 +25,9 @@ jobs:
         echo "go env GOPATH"
         go env GOPATH
         echo "pwd" 
+        pwd
+        mv /home/runner/work/intentionally-vulnerable-golang-project/intentionally-vulnerable-golang-project ./src  && cd ./src
+        echo "move pwd"
         pwd
         echo "apt installs"
         sudo apt update
