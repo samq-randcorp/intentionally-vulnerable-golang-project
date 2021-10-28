@@ -25,14 +25,10 @@ jobs:
         echo "go env GOPATH"
         go env GOPATH
         echo "pwd" 
-        pwd
-        cd ../.. && mv /home/runner/work/intentionally-vulnerable-golang-project/intentionally-vulnerable-golang-project ./src  && cd ./src
-        echo "move pwd"
-        pwd
         echo "apt installs"
         sudo apt update
         sudo apt install -y go-dep
         echo "godep installed"
-        dep ensure
+        rm Gopkg.toml
         dep init
       
