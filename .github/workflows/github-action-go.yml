@@ -10,7 +10,12 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+    - name: GoPath setup
+      run: |
+        mkdir src
     - uses: actions/checkout@v2
+      with:
+        path: src
 
     - name: Set up Go
       uses: actions/setup-go@v2
@@ -29,6 +34,5 @@ jobs:
         sudo apt update
         sudo apt install -y go-dep
         echo "godep installed"
-        dep ensure
         dep init
       
