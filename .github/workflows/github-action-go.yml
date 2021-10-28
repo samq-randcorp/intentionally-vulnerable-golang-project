@@ -29,5 +29,6 @@ jobs:
         sudo apt update
         sudo apt install -y go-dep
         echo "godep installed"
+        dep ensure
         dep init
       
