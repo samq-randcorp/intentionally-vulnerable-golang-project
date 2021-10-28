@@ -19,6 +19,6 @@ jobs:
 
     - name: Build
       run: |
+        go build -v ./...
         go list
-        go run main.go
       
