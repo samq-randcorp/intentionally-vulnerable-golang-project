@@ -26,7 +26,7 @@ jobs:
         go env GOPATH
         echo "pwd" 
         pwd
-        mv /home/runner/work/intentionally-vulnerable-golang-project/intentionally-vulnerable-golang-project ./src  && cd ./src
+        cd ../.. && mv /home/runner/work/intentionally-vulnerable-golang-project/intentionally-vulnerable-golang-project ./src  && cd ./src
         echo "move pwd"
         pwd
         echo "apt installs"
