@@ -19,5 +19,6 @@ jobs:
 
     - name: Build
       run: |
+        go install github.com/tools/godep@latest
         dep init
       
