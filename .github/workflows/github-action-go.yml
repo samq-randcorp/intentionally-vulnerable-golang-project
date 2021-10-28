@@ -19,7 +19,5 @@ jobs:
 
     - name: Build
       run: |
-        go mod tidy
-        echo "dependency list start"
-        go list -mod=mod -deps all
+        dep init
       
