@@ -19,6 +19,7 @@ jobs:
 
     - name: Build
       run: |
+        export GOPATH=/home/runner/go
         echo "GOPATH IS" $GOPATH
         echo "GOROOT IS " $GOROOT
         echo "PATH IS" $PATH
@@ -27,5 +28,6 @@ jobs:
         echo "apt installs"
         sudo apt update
         sudo apt install -y go-dep
+        echo "godep installed"
         dep init
       
